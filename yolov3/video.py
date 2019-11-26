@@ -1,3 +1,4 @@
+import sys
 import cv2
 import torch
 import random
@@ -14,7 +15,7 @@ from utils.utils import non_max_suppression
 
 def main():
     # load model
-    device = torch.device('cpu')
+    device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
     model = Darknet(cfg.MODEL, img_size=cfg.SIZE).to(device)
     model.load_darknet_weights(cfg.WEIGHTS)
     model.eval()
@@ -29,7 +30,7 @@ def main():
     Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
 
     # create video capture
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture('udp://127.0.0.1:5000', cv2.CAP_FFMPEG)
     if not cap.isOpened():
         print('VideoCapture not opened')
         exit(-1)
@@ -44,6 +45,7 @@ def main():
     while True:
         # read frame
         ret, frame = cap.read()
+        frame = cv2.flip(cv2.flip(frame, 0), 1)
         orig = frame
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         img = Image.fromarray(frame)
