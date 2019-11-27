@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 from torchvision import transforms
 
 import cfg
+from sort import Sort
 from utils.utils import load_classes
 from utils.utils import rescale_boxes
 from utils.utils import non_max_suppression
@@ -41,11 +42,28 @@ def main():
         transforms.ToTensor()
     ])
 
+    # tracker
+    tracker = Sort()
+
+    # bbox colors
+    colors=[
+        (255,0,0),
+        (0,255,0),
+        (0,0,255),
+        (255,0,255),
+        (128,0,0),
+        (0,128,0),
+        (0,0,128),
+        (128,0,128),
+        (128,128,0),
+        (0,128,128)
+    ]
+
     # process stream
     while True:
         # read frame
         ret, frame = cap.read()
-        frame = cv2.flip(cv2.flip(frame, 0), 1)
+        # frame = cv2.flip(cv2.flip(frame, 0), 1)
         orig = frame
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         img = Image.fromarray(frame)
@@ -55,18 +73,29 @@ def main():
         with torch.no_grad():
             detections = model(img)
             detections = non_max_suppression(detections, cfg.CONF, cfg.NMS)
-
-            # draw detections
-            for i, det in enumerate(detections):
-                if det is not None:
-                    det = rescale_boxes(det, cfg.SIZE, frame.shape[:2])
-                    unique_labels = det[:, -1].cpu().unique()
-                    n_cls_preds = len(unique_labels)
-                    for x1, y1, x2, y2, conf, cls_conf, cls_pred in det:
-                        if int(cls_pred) not in app_classes:
-                            continue
-                        print('Label: %s, Conf: %.5f' % (classes[int(cls_pred)], cls_conf.item()))
-                        orig = cv2.rectangle(orig, (x1, y1), (x2, y2), (255, 0, 0), 2)
+            detections = detections[0]
+            if detections is not None:
+                # track objects
+                tracked_objects = tracker.update(detections.cpu())
+                det = rescale_boxes(tracked_objects, cfg.SIZE, frame.shape[:2])
+                for x1, y1, x2, y2, obj_id, cls_pred in det:
+                    # ignore not necessary classes
+                    if int(cls_pred) not in app_classes:
+                        continue
+                    # draw bbox
+                    color = colors[int(obj_id) % len(colors)]
+                    cls = classes[int(cls_pred)]
+                    x1, x2, y1, y2 = int(x1), int(x2), int(y1), int(y2)
+                    cv2.rectangle(orig, (x1, y1), (x2, y2), color, 2)
+                    cv2.putText(
+                        orig,
+                        cls + '-' + str(int(obj_id)),
+                        (x1, y1 - 10),
+                        cv2.FONT_HERSHEY_SIMPLEX,
+                        1,
+                        (255, 255, 255),
+                        3
+                    )
 
         cv2.imshow('YoloV3', orig)
         if cv2.waitKey(1) & 0xFF == ord('q'):
