@@ -1,9 +1,8 @@
 #include "LeptonThread.h"
-
 #include "Palettes.h"
 #include "SPI.h"
 #include "Lepton_I2C.h"
-
+#include "opencv2/opencv.hpp" 
 #define PACKET_SIZE 164
 #define PACKET_SIZE_UINT16 (PACKET_SIZE/2)
 #define PACKETS_PER_FRAME 60
@@ -96,7 +95,7 @@ void LeptonThread::run()
 
 		//lets emit the signal for update
 		emit updateImage(myImage);
-
+        cv::Mat mat(myImage.rows(),myImage.cols(),CV_8UC3,myImage.scanline());
 	}
 	
 	//finally, close SPI port just bcuz
@@ -109,5 +108,5 @@ void LeptonThread::performFFC() {
 }
 void LeptonThread::saveSnapshot() {
     ++snapshotCount;
-    myImage.save(QString("rgb%1.jpg").arg(snapshotCount), "JPG", 100);
+    myImage.save(QString("rgb%1.jpg").arg(snapshotCount), "JPG", 10);
 }
