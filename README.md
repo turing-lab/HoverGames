@@ -16,5 +16,4 @@ Aditional to the NXP Drone kit out team add some components to the system.
 - Flir Lepton Thermal camera
 - Raspberry pi 3
 - 3 Amps Step-down Dc Converter
-
-
+## 
