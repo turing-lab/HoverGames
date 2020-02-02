@@ -27,3 +27,10 @@ Aditional to the NXP Drone kit our team add some components to the system.
 | Raspberry pi 3                | $35.00  |
 | 3 Amps Step-down Dc Converter | $5.00   |
 
+## Video and Photos
+### Flight Demo
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=teqXtwTc360" target="_blank">
+  <img src="http://img.youtube.com/vi/teqXtwTc360/0.jpg" 
+    alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
+</a>
+
