@@ -51,3 +51,5 @@ Aditional to the NXP Drone kit our team add some components to the system.
 ## Cad Files
 To equip the drone with the aditional gear for our project, there were necesary some 3D printed parts that we make available on the next GrabCad Folder. 
 [Galileo Hovergames GrabCad](https://grabcad.com/library/hovergames-galileo-1)
+![cameraholder](https://github.com/turing-lab/HoverGames/blob/master/assets/cameraholder.JPG)
+![raspyholder](https://github.com/turing-lab/HoverGames/blob/master/assets/raspyholder.JPG)
