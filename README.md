@@ -48,3 +48,6 @@ Aditional to the NXP Drone kit our team add some components to the system.
 
 ### Mapviz Screenshot
 ![mapviz-screenshot](assets/mapviz-screenshot.jpg?raw=true)
+## Cad Files
+To equip the drone with the aditional gear for our project, there were necesary some 3D printed parts that we make available on the next GrabCad Folder. 
+[Galileo Hovergames GrabCad](https://grabcad.com/library/hovergames-galileo-1)
