@@ -20,17 +20,23 @@ Aditional to the NXP Drone kit our team add some components to the system.
 
 | Descriptión                   | Price   |
 |-------------------------------|--------:|
-| 4200mAh Li-Po Battery         | $31.99  |
+| 4200mAh Lipo Battery          | $31.99  |
 | 1200mAh Li-On Battery         | $21.00  |
 | USB Logitech Web Camera       | $20.00  |
-| Flir Lepton Thermal Camera    | $239.95 |
-| Raspberry Pi 3                | $35.00  |
+| Flir Lepton Thermal camera    | $239.95 |
+| Raspberry pi 3                | $35.00  |
 | 3A Step-down DC-DC Converter  | $5.00   |
 
 ## Video and Photos
 ### Flight Demo
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=teqXtwTc360" target="_blank">
   <img src="http://img.youtube.com/vi/teqXtwTc360/0.jpg" 
+    alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
+</a>
+
+### Yolo Demo
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Jbw3nPCIjI" target="_blank">
+  <img src="http://img.youtube.com/vi/Jbw3nPCIjI&/0.jpg" 
     alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
 </a>
 
