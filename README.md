@@ -1,5 +1,5 @@
 # Galileo University Proposal for HoverGames Challenge 
-**Elevator pitch:** The approach of Turing Lab at Galileo University offers propose the use of drones to help firemen setting landmarks of clusters of people to create a dynamic map that indicates the dimensions of the fire and the location of the groups of persons that are in danger.
+**Elevator pitch:** The approach of Turing Lab at Galileo University propose the use of drones to help firemen setting landmarks of clusters of people to create a dynamic map that indicates the dimensions of the fire and the location of the groups of persons that are in danger.
 
 ## Modules description
 ### Lepton Module
