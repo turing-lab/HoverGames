@@ -3,10 +3,10 @@
 
 ## Modules description
 ### Lepton Module
-This is a modified package of the Lepton repository from Groupgets that makes it possible to interface the IR camera with the raspberry pi 3. Our module makes it possible to take screenshots of the IR image and receive the thermal signal with a shutterless lens.
+This is a modified package of the Lepton repository from Groupgets that makes it possible to interface the IR camera with the Raspberry Pi 3. Our module makes it possible to take screenshots of the IR image and receive the thermal signal with a shutterless lens.
 
 ### Stream 
-This module contains a script that sends over UDP the video feed from the usb camera attached to the raspberry pi. The python script receives the video signal to the main computer using Opencv functions.
+This module contains a script that sends over UDP the video feed from the usb camera attached to the Raspberry Pi. The python script receives the video signal to the main computer using Opencv functions.
 
 ### YOLOv3
 Here a custom version of YOLOv3 was adapted to detect persons, animals and cars. This are the main features intended to be inserted on to the map that will be used by the rescue teams that need to locate survivors and the fire status.
@@ -16,7 +16,7 @@ In Turing Lab, we are great enthusiasts of using ROS and for this project we mad
 MapViz is a GPS visual interface that makes possible to generate maps, rutes and point positions on a global localization enviroment. 
 
 ## Bill of materials
-Aditional to the NXP Drone kit our team add some components to the system.
+Aditional to the NXP Drone Kit our team add some components to the system.
 
 | Descriptión                   | Price   |
 |-------------------------------|--------:|
@@ -24,8 +24,9 @@ Aditional to the NXP Drone kit our team add some components to the system.
 | 1200mAh Li-On Battery         | $21.00  |
 | USB Logitech Web Camera       | $20.00  |
 | Flir Lepton Thermal camera    | $239.95 |
-| Raspberry pi 3                | $35.00  |
+| Raspberry Pi 3                | $35.00  |
 | 3A Step-down DC-DC Converter  | $5.00   |
+| Router                        | $60.00  |
 
 ## Video and Photos
 ### Flight Demo
