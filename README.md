@@ -8,8 +8,8 @@ This is a modified package of the Lepton repository from Groupgets that makes it
 ### Stream 
 This module contains a script that sends over UDP the video feed from the usb camera attached to the raspberry pi. The python script receives the video signal to the main computer using Opencv functions.
 
-### Yolov3
-Here a custom version of YoloV3 was adapted to detect persons, animals and cars. This are the main features intended to be inserted on to the map that will be used by the rescue teams that need to locate survivors and the fire status.
+### YOLOv3
+Here a custom version of YOLOv3 was adapted to detect persons, animals and cars. This are the main features intended to be inserted on to the map that will be used by the rescue teams that need to locate survivors and the fire status.
 
 ### ROS
 In Turing Lab, we are great enthusiasts of using ROS and for this project we made use of the packages of MAVROS and MAPVIZ. MavRos gave us the opportunity to communicate with the drone using Mavlkink messages that provide all the information needed from the sensors of the drone. 
@@ -31,12 +31,18 @@ Aditional to the NXP Drone kit our team add some components to the system.
 ### Flight Demo
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=teqXtwTc360" target="_blank">
   <img src="http://img.youtube.com/vi/teqXtwTc360/0.jpg" 
-    alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
+    alt="Flight Demo" width="240" height="180" border="10" />
 </a>
 
-### Yolo Demo
+### YOLO Demo
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=-Jbw3nPCIjI" target="_blank">
   <img src="http://img.youtube.com/vi/-Jbw3nPCIjI/0.jpg" 
-    alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
+    alt=" Yolo Demo" width="240" height="180" border="10" />
+</a>
+
+### Thermal Camera Demo
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=BC_lhx5vdAs" target="_blank">
+  <img src="http://img.youtube.com/vi/BC_lhx5vdAs/0.jpg" 
+    alt="Thermal Camera Demo" width="240" height="180" border="10" />
 </a>
 
