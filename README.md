@@ -46,3 +46,5 @@ Aditional to the NXP Drone kit our team add some components to the system.
     alt="Thermal Camera Demo" width="240" height="180" border="10" />
 </a>
 
+### Mapviz Screenshot
+![mapviz-screenshot](assets/mapviz-screenshot.jpg?raw=true)
