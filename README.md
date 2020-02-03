@@ -6,7 +6,7 @@
 This is a modified package of the Lepton repository from Groupgets that makes it possible to interface the IR camera with the Raspberry Pi 3. Our module makes it possible to take screenshots of the IR image and receive the thermal signal with a shutterless lens.
 
 ### Stream 
-This module contains a script that sends over UDP the video feed from the usb camera attached to the Raspberry Pi. The python script receives the video signal to the main computer using Opencv functions. Currently we are using a conventional router to stream the video with a range of approximately 100m. This limitation will be reduce by getting a more robust transmiter. 
+This module contains a script that sends over UDP the video feed from the usb camera attached to the Raspberry Pi. The python script receives the video signal to the main computer using Opencv functions. Currently we are using a conventional router to stream the video with a range of approximately 100m. This limitation will be enhanced by getting a more robust transmiter. 
 
 ### YOLOv3
 Here a custom version of YOLOv3 was adapted to detect persons, animals and cars. This are the main features intended to be inserted on to the map that will be used by the rescue teams that need to locate survivors and the fire status.
