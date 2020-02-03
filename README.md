@@ -51,8 +51,8 @@ Aditional to the NXP Drone kit our team add some components to the system.
 Mapviz is used as a visualization tool to show up where the drone is in a map (provided by the Bing Maps API) using the GPS information. Furthermore the trajectory of the drone is draw in the map using a red line. Moreover the video that is being captured from the camera that is in the drone is displayed in the left superior corner.
 We are currently working in add people, animals and other objects in the map as markers and also add the information from the thermal camera as a heat map to help the rescue teams in their tasks.
 
-## Cad Files
-To equip the drone with the aditional gear for our project, there were necesary some 3D printed parts that we make available on the next GrabCad Folder. 
+## CAD Files
+To equip the drone with the additional gear for our project, there were necessary some 3D printed parts that we make available on the next GrabCad folder.
 [Galileo Hovergames GrabCad](https://grabcad.com/library/hovergames-galileo-1)
 
 
